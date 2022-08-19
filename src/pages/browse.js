@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
-import { BrowseContainer, SelectProfileContainer } from '../containers';
-import { useFilms, useSeries } from '../hooks';
-import { selectionMap } from '../utils';
+import React from 'react';
+import { BrowseContainer } from '../containers/browse';
+import { useContent } from '../hooks';
+import { selectionFilter } from '../utils';
 
-export function Browse() {
-  const { series } = useSeries();
-  const { films } = useFilms();
-  const [profileId, setProfileId] = useState(null);
-  const [selection, setSelection] = useState('series');
-  const slideData = selectionMap({ series, films });
+export default function Browse() {
+  const { series } = useContent('series');
+  const { films } = useContent('films');
+  const slides = selectionFilter({ series, films });
 
-  return profileId ? (
-    <BrowseContainer selection={selection} setSelection={setSelection} slides={slideData[selection]} />
-  ) : (
-    <SelectProfileContainer setProfileId={setProfileId} />
-  );
+  return <BrowseContainer slides={slides} />;
 }

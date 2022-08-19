@@ -1,6 +1,5 @@
 # bye
 src/lib/firebase.js
-timestamp.txt
 
 # dependencies
 /node_modules
@@ -12,6 +11,7 @@ timestamp.txt
 
 # production
 /build
+/src/lib/firebase.prod.js
 
 # misc
 .DS_Store

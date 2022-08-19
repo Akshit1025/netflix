@@ -1,4 +1,2 @@
-import { useAuthListener } from './useAuthListener';
-import { useContent } from './useContent';
-
-export { useAuthListener, useContent };
+export { default as useAuthListener } from './use-auth-listener';
+export { default as useContent } from './use-content';
