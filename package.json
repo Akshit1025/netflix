@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/icons": "^4.11.3",
     "firebase": "^9.9.2",
     "fuse.js": "^6.6.2",
     "normalize.css": "^8.0.1",
